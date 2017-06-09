@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前的编码集：charset=gbk,gb2312(中文编码），utf-8(国际编码）--->
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <!--声明当前页面的三要素-->
+  <meta name="Author" content="">
+  <meta name="Keywords" content="关键词,关键字">
+  <meta name="Description" content="对网页的描述">
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="type/css" href="iconfont/iconfont.css" />
+  <title>锤子商城</title>
+  <style type="text/css">
+	*{margin:0;padding:0;}
+	body{font:14px/1.5 'Microsoft Yahei',sans-serif;/*sans-serif 是手机默认字体*/background:#eee;}
+	a{text-decoration:none;}
+	ol,ul{list-style:none;}
+	img{border:none;vertical-align:middle;}
+	.clearfix{*zoom:1;}
+	.clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+
+	#start{}
+	#start .start-top{width:100%;min-width:1220px;height:100px;background:#000;}
+	#start .start-top .start-top-banner{width:1220px;margin:0 auto;line-height:100px;}
+	#start .start-top .start-top-banner .start-t-logo a{display:block;width:50px;height:50px;}
+	#start .start-top .start-top-banner .start-t-nav{margin-left:130px;}
+	#start .start-top .start-top-banner .start-t-nav ul li a{padding:0 25px;color:#c8c8c8;font-size:14px;transition:0.3s;}
+	#start .start-top .start-top-banner .start-t-nav ul li a:hover{color:#fff;}
+	#start /* .start-top .start-top-banner */ .start-t-user ul li{width:50px;color:#c8c8c8;}
+	#start /* .start-top .start-top-banner */ .start-t-user ul li .shopcarbox{display: none;width:365px;height:320px;top:69px;right:0;background:#fff url("images/cart-bg.png") no-repeat center 90px;border:1px solid #ddd;border-radius:10px;text-align:center;line-height: 30px;opacity: 0;transition:0.2s;z-index:200;}
+	#start /* .start-top .start-top-banne */ .start-t-user ul li .shopcarbox:before{display:block;content:"";width:0;height:0;margin: -20px 0 0 304px;border:10px solid transparent;border-bottom-color:#fff;}   
+	#start /* .start-top .start-top-banner */ .start-t-user ul li .shopcarbox h3{margin-top: 170px;font-size: 18px;color: #333;}
+
+	#start .start-nav{width:100%;position:relative;}
+	#start .nav-scroll{position:fixed;top:0;z-index:900;line-height:88px;background:linear-gradient(#fff,#eee);box-shadow:0 2px 30px rgba(0,0,0,.5);}
+	#start .start-nav .start-nav-box{width:1220px;margin:0 auto;line-height:88px;}
+	#start .start-nav .user-hid{display:none;}
+	#start .start-nav .start-nav-box > ul li a{padding:0 20px;color:#666;;font-size:;}
+	#start .start-nav .start-nav-box > ul li a:hover{color:#333;}
+	#start .start-nav .start-nav-slide{position: absolute;position: fixed;top:88px;width:100%;height:0;z-index: 150;overflow: hidden;}
+	#start .start-nav .start-nav-slide .nav-slide-img{width:100%;padding:50px 0;background:#fff;border-bottom:1px solid #ddd;box-shadow:0 1px 5px #000;}
+	#start .start-nav .start-nav-slide .nav-slide-img ul{width:400px;margin:0 auto;}
+	#start .start-nav .start-nav-slide .nav-slide-img ul li{width:160px;text-align:center;}
+	#start .start-nav .start-nav-slide .nav-slide-img ul li p:nth-of-type(1){padding:10px 0;}
+	#start .start-nav .start-nav-slide .nav-slide-shade{width: 100%;background: rgba(123,123,124,0.2);height: 200px;}
+
+	#content{width:100%;min-width:1220px;}
+	#content .lunbo{position:relative;width:1220px;height:554px;margin:0 auto;}
+	#content .lunbo .lunbo-imgs{height: 554px;}
+	#content .lunbo .lunbo-imgs ul li{position:absolute;width:100%;height:554px;background:url('images/hs1.png') no-repeat center/cover;}
+	#content .lunbo .lunbo-imgs ul li:nth-child(2){background:url('images/jhs1.png') no-repeat center/cover;}
+	#content .lunbo .lunbo-imgs ul li a img{position:absolute;top:0;left:0;}
+	#content .lunbo .lunbo-list{position:absolute;left:50%;bottom:50px;margin-left:-20px;}
+	#content .lunbo .lunbo-list ul li{float:left;width:10px;height:10px;background:#aaa;border-radius:100%;margin-right:10px;cursor:pointer;}
+	#content .lunbo .lunbo-list ul li.checked{background:#fff;box-shadow:0 0 0 2px #fff;}
+
+	#content .news,#content .hotgoods,#content .official,#content .brand,#content .dynamic,#content .apply,#content .forum {width:1220px;margin:30px auto;border:1px solid #ddd;border-radius:8px;overflow:hidden;}
+	#content .news ul li a{display:block;width:304px;height:200px;}
+	#content .news ul li a:hover{box-shadow:0 0 50px 0 #ccc inset;}
+	#content .news ul li:nth-child(2) a:hover{box-shadow:0 0 0 0;}
+	#content .news ul li:nth-child(1) a{background:url("images/new-bg01.png") no-repeat center;}
+	#content .news ul li:nth-child(2) a{background:url("images/new-bg02.jpg") no-repeat center;}
+	#content .news ul li:nth-child(3) a{background:url("images/new-bg03.jpg") no-repeat center;}
+	#content .news ul li:nth-child(4) a{background:url("images/new-bg04.jpg") no-repeat center;}
+
+	#content .hotgoods h3,#content .official h3,#content .brand h3,#content .dynamic h3,#content .apply h3{border-bottom:1px solid #ddd;line-height:60px;background:#fafafa;}
+	#content .hotgoods ul li > a{display:block;position:relative;width:304px;height:430px;border-right:1px solid #eee;background:#fff;text-align:center;}
+	#content .hotgoods ul li > a:hover{box-shadow: 0 0 70px 0 rgba(0,0,0,0.1) inset;}
+	#content .hotgoods ul li > a:hover .hotgoods-price{display:none;}
+	#content .hotgoods ul li > a:hover .hotgoods-make{display:block;}
+	#content .hotgoods ul li > a .hotgoods-img{position:relative;width:100%;height:260px;}
+	#content .hotgoods ul li > a .hotgoods-img img{position:absolute;top:50px;left:50%;margin-left:-103px;/* opacity:1; */}
+	#content .hotgoods ul li > a .hotgoods-txt{width:100%;text-align:center;/* overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-indent:10px; */}
+	#content .hotgoods ul li > a .hotgoods-txt h4{width:90%;margin:0 auto;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+	#content .hotgoods ul li > a .hotgoods-btn{width:100%;text-align:center;padding: 10px 0;}
+	#content .hotgoods ul li > a .hotgoods-btn input{width:12px;height:12px;border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 1px rgb(178,178,178);cursor:pointer;}
+	/* #content .hotgoods ul li > a .hotgoods-btn input:hover{box-shadow:0 0 0 3px rgb(178,178,178);} */
+	#content .hotgoods ul li > a .hotgoods-price{color:#d21a28;/* display:none; */margin-top:20px;} 
+	#content .hotgoods ul li > a .margin-60{margin-top:60px;}
+	#content .hotgoods ul li > a .hotgoods-make{position:absolute;bottom:40px;width:100%;text-align:center;display:none;}
+	#content .hotgoods ul li > a .hotgoods-make span{display:inline-block;width:102px;height:30px;border:1px solid #ddd;text-align:center;line-height:30px;margin-right:5px;border-radius:5px;}
+	#content .hotgoods ul li > a .hotgoods-make span.shopcar{background:#6181ce;}
+
+	#content .official ul li.first-bg a{display:block;width:609px;background: url('images/gfjx-bg.jpg');}
+	#content .brand ul li.first-bg a{display:block;width:609px;background: url('images/ppjx-bg.jpg');}
+
+	#content .dynamic ul li a{display:block;width:304px;height:200px;}
+	#content .dynamic ul li a:hover{box-shadow:0 0 50px 0 #ccc inset;}
+	#content .dynamic ul li:nth-child(1) a:hover{box-shadow:0 0 0 0;}
+	#content .dynamic ul li:nth-child(1) a{background:url("images/dyT01.png") no-repeat center/cover;}
+	#content .dynamic ul li:nth-child(2) a{background:url("images/dyT02.jpg") no-repeat center/cover;}
+	#content .dynamic ul li:nth-child(3) a{background:url("images/dyT03.jpg") no-repeat center/cover;}
+	#content .dynamic ul li:nth-child(4) a{background:url("images/dyT04.jpg") no-repeat center/cover;}
+
+	#content .apply ul li{width:304px;height:365px;background:#fff;}
+	#content .apply ul li:hover{box-shadow:0 0 50px 0 #ccc inset;}
+	#content .apply ul li:hover .show{opacity:0;}
+	#content .apply ul li:hover .hidden{opacity:1;}
+	#content .apply ul li .show{padding:70px 30px 0;transition:opacity 0.3s ease-in-out;opacity:1;}
+	#content .apply ul li .show .show-bg{width:70px;height:90px;margin:0 auto;background:url("images/apply-bg.png") no-repeat;}
+	#content .apply ul li:nth-child(1) .show .show-bg{background-position:-10px 0;}
+	#content .apply ul li:nth-child(2) .show .show-bg{background-position:-106px 0;}
+	#content .apply ul li:nth-child(3) .show .show-bg{background-position:-202px 0;}
+	#content .apply ul li:nth-child(4) .show .show-bg{background-position:-298px 0;}
+	#content .apply ul li .show .show-txt{width:100%;text-align:center;}
+	#content .apply ul li .show .show-txt p.vertion{height:25px;background:url("images/apply-smallbg.png") no-repeat center;}
+	#content .apply ul li .hidden{width:100%;height:100%;left:0;top:0;transition:opacity 0.3s ease-in-out;opacity:0;}
+	#content .apply ul li .hidden a{display:block;width:100%;text-align:center;}
+	#content .apply ul li .hidden a:nth-child(3){color:#75bae5;}
+
+	#content .forum .forum-top{border-bottom:1px solid #ddd;line-height:60px;background:#fafafa;}
+	#content .forum .forum-top a{width:105px;height:36px;margin:10px 15px 0 0;border:1px solid #ddd;border-radius:5px;text-align:center;line-height:36px;}
+	#content .forum .forum-top a:hover{background:#eee;}
+	#content .forum .forum-content ul li{width:254px;padding:25px 25px 20px;background:#fff;cursor:pointer;}
+	#content .forum .forum-content ul li:hover{box-shadow:0 0 50px 0 #ccc inset;}
+	#content .forum .forum-content ul li .forum-info img{display:block;margin:0 auto;border-radius:5px;}
+	#content .forum .forum-content ul li .forum-info h4{height: 48px;margin:20px 0;}    
+	#content .forum .forum-content ul li .forum-info p{height: 54px;}
+	#content .forum .forum-content ul li .forum-info a{color:#84a3e3;}
+
+	#footer{width:100%;min-width:1220px;margin-top:30px;padding:80px 0 50px 0;background:#fafafa;}
+	#footer nav{width:1220px;margin:0 auto;padding:20px 0;border-bottom:1px solid #ddd;font-size:12px;}
+	#footer nav .footer-nav dl{margin-right:100px;}
+	#footer nav .footer-nav dl dd{line-height:25px;color:#888;}
+	#footer nav .footer-nav dl dd:hover{color:#333;}
+	#footer nav .footer-tel a{width:100px;padding-left:30px;line-height:30px;text-align:center;background:url("images/wenhao.png") no-repeat 30px;border:1px solid #ddd;border-radius:5px;color:#75bae5;}
+	#footer nav .footer-tel a:hover{background-color:#eee;}
+
+	#footer .copyright{width:1220px;margin:0 auto;}
+	#footer .copyright .copyright-txt p{padding:5px 0;}
+	#footer .copyright .copyright-txt p a{border-left:1px solid #ddd;color: #75bdee;}
+
+	#footer .copyright .copyright-lan{position:relative;top:-17px;width:120px;height:53px;overflow:hidden;}
+	#footer .copyright .copyright-lan .language{position:absolute;width: 100%;height:106px;top:-53px;left:0;border-radius:5px;box-shadow:0 0 5px 0 #ddd;}
+	#footer .copyright .copyright-lan .language span{display:block;line-height:53px;padding-left:36px;cursor:pointer;}
+	#footer .copyright .copyright-lan .language span:nth-child(1){background:url("images/meiguo.png") no-repeat 14px center;}
+	#footer .copyright .copyright-lan .language span:nth-child(2){background:url("images/china.png") no-repeat 14px center;}
+	#footer .copyright .copyright-lan .language span:nth-child(2) i{display:inline-block;margin-left:20px;}
+
+	#stickTop{position:fixed;/* bottom:20px; */right:20px;width:45px;height:45px;border-radius:10px;border:1px solid #ddd;background:rgba(255,255,255,.5);line-height:45px;text-align:center;z-index:200;color:#ddd;transition:bottom .4s ease;cursor:pointer;}
+	#stickTop:hover{background:#fff;}
+  </style> 
+ </head>
+ <body>
+	<header id="start">
+		<div class="start-top clearfix">
+			<div class="start-top-banner">
+				<div class="start-t-logo fl-l">
+					<a href="http://www.smartisan.com/#/" target="_blank"><img src="images/logo.png" alt="锤子科技官网" width="50" height="50" title="锤子科技官网"/></a>
+				</div>
+				<div class="start-t-nav fl-l">
+					<ul class="clearfix">
+						<li class="fl-l"><a href="http://www.smartisan.com/#/shop" target="_blank">在线商城</a></li>
+						<li class="fl-l"><a href="http://www.smartisan.com/jianguopro/" target="_blank">坚果Pro</a></li>
+						<li class="fl-l"><a href="http://www.smartisan.com/m1/" target="_blank"> Smartisan M1 / M1L </a></li>
+						<li class="fl-l"><a href="http://www.smartisan.com/os/" target="_blank"> Smartisan OS </a></li>
+						<li class="fl-l"><a href="https://cloud.smartisan.com/" target="_blank">欢喜云</a></li>
+						<li class="fl-l"><a href="http://www.smartisan.com/apps/" target="_blank">应用下载</a></li>
+						<li class="fl-l"><a href="http://bbs.smartisan.com/forum.php" target="_blank">官方论坛</a></li>
+					</ul>
+				</div>
+				<div class="start-t-user fl-r">
+					<ul class="clearfix">
+						<li class="fl-l"><a href="#" class="iconfont icon-99zhuanhuan"></a></li>
+						<li class="fl-l pos-r">
+							<a href="#" class="iconfont icon-gouwuche" id="shopcar"></a>
+							<div class="shopcarbox pos-a" id="shopcarbox">
+								<h3 class="f-wei-500">购物车为空</h3>
+								<p>您还没有选购任何商品，现在前往商城选购吧！</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="start-nav">
+			<div class="start-nav-box clearfix">
+				<ul class="fl-l clearfix">
+					<li class="fl-l"><a href="#">首页</a></li>
+					<li class="fl-l" id="slideUp"><a href="#">手机</a></li>
+					<li class="fl-l"><a href="#">“足迹系列”手感膜</a></li>
+					<li class="fl-l"><a href="#">官方配件</a></li>
+					<li class="fl-l"><a href="#">周边产品</a></li>
+					<li class="fl-l"><a href="#">第三方配件</a></li>
+					<li class="fl-l"><a href="#">全部商品</a></li>
+					<li class="fl-l"><a href="#">服务</a></li>
+				</ul>
+				<div class="start-t-user user-hid fl-r mar-r20">
+					<ul class="clearfix">
+						<li class="fl-l"><a href="#" class="iconfont icon-99zhuanhuan c-666"></a></li>
+						<li class="fl-l pos-r">
+							<a href="#" class="iconfont icon-gouwuche c-666" id="shopcar"></a>
+							<div class="shopcarbox pos-a" id="shopcarbox">
+								<h3 class="f-wei-500">购物车为空</h3>
+								<p>您还没有选购任何商品，现在前往商城选购吧！</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="start-nav-slide" id="start-nav-slide">
+				<div class="nav-slide-img">
+					<ul class="clearfix">
+						<li class="fl-l bor-r">
+							<a href="#"><img src="images/nav-hidd01.png" alt="" width="160" height="160"/></a>
+							<p class="c-555 f-siz16">坚果 Pro</p>
+							<p class="c-f00 f-siz14">￥<span>1499.00</span>起</p>
+						</li>
+						<li class="fl-l">
+							<a href="#"><img src="images/nav-hidd02.png" alt="" width="160" height="160"/></a>
+							<p class="c-555 f-siz16">坚果 Pro</p>
+							<p class="c-f00 f-siz14">￥<span>1499.00</span>起</p>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-slide-shade">
+					
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="content">
+		<div class="lunbo">
+			<div class="lunbo-imgs">
+				<ul>
+					<li>
+						<a href=""><img src="images/hs2.png" alt="" width="1220" height="554"/></a>
+						<a href=""><img src="images/hs3.png" alt="" width="1220" height="554"/></a>
+					</li>
+					<li>
+						<a href=""><img src="images/jhs2.png" alt="" width="1220" height="554"/></a>
+						<a href=""><img src="images/jhs3.png" alt="" width="1220" height="554"/></a>
+					</li>
+					<li>
+						<a href=""><img src="images/hs2.png" alt="" width="1220" height="554"/></a>
+						<a href=""><img src="images/hs3.png" alt="" width="1220" height="554"/></a>
+					</li>
+				</ul>
+			</div>
+			<div class="lunbo-list">
+				<ul class="clearfix">
+					<li class="fl-l"></li>
+					<li class="fl-l"></li>
+					<li class="fl-l"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="news">
+			<ul class="clearfix">
+				<li class="fl-l bor-r"><a href="#"></a></li>
+				<li class="fl-l bor-r"><a href="#"></a></li>
+				<li class="fl-l bor-r"><a href="#"></a></li>
+				<li class="fl-l bor-r"><a href="#"></a></li>
+			</ul>
+		</div>
+		<div class="hotgoods">
+			<h3 class="f-wei-500 f-siz18 c-666 pad-l30">热门商品</h3>
+			<ul class="clearfix">
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/hot01.png" alt="" width="206" height="206"/>
+							<img src="images/hot02.png" alt="" width="206" height="206"/>
+							<img src="images/hot03.png" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan T恤 表情符</h4>
+							<p class="c-aaa f-siz12">100% 美国 SUPIMA 棉、舒适拉绒质地</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(0,0,0);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(255,255,255);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(23,37,66);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/hot13.jpg" alt="" width="206" height="206"/>
+							<img src="images/hot12.jpg" alt="" width="206" height="206"/>
+							<img src="images/hot11.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan T恤 表情符</h4>
+							<p class="c-aaa f-siz12">100% 美国 SUPIMA 棉、舒适拉绒质地</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(183, 50, 51);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(60,60,60);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(137, 137, 137);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/hot21.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan T恤 表情符</h4>
+							<p class="c-aaa f-siz12">100% 美国 SUPIMA 棉、舒适拉绒质地</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:#eee;box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/hot31.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan T恤 表情符</h4>
+							<p class="c-aaa f-siz12">100% 美国 SUPIMA 棉、舒适拉绒质地</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:#eee;box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="official hotgoods">
+			<h3 class="f-wei-500 f-siz18 c-666 pad-l30">官方精选</h3>
+			<ul class="clearfix">
+				<li class="fl-l first-bg">
+					<a class="t-a-c bor-r bor-b" href="#">
+						
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r bor-b" href="#">
+						<div class="hotgoods-img">
+							<img src="images/gfjx11.jpg" alt="" width="206" height="206"/>
+							<img src="images/gfjx12.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">坚果 Pro 软胶保护套</h4>
+							<p class="c-aaa f-siz12">TPU 环保材质、耐磨、耐油、耐久性强</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(183, 50, 51); box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(60,60,60);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r bor-b" href="#">
+						<div class="hotgoods-img">
+							<img src="images/gfjx21.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan 原装 Type-C 数据线</h4>
+							<p class="c-aaa f-siz12">PTC 过温保护、凹形设计、TPE 环保材质</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(60,60,60);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/gfjx31.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan 双口 & 快充车载电器</h4>
+							<p class="c-aaa f-siz12">铝合金机身、双口 & 快充、智能调节</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(0,0,0);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/gfjx41.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">坚果Pro钢化玻璃手感膜"足迹系列"任 坚果Pro钢化玻璃手感膜"足迹系列"任</h4>
+							<p class="c-aaa f-siz12">进口钢化玻璃材质、提供高强度保护</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:#eee;box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/gfjx51.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartisan 坚果自拍杆</h4>
+							<p class="c-aaa f-siz12">航空铝合金伸缩杆、防过敏硅胶手柄</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:#eee;box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/gfjx61.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Smartian 原装快充充电器 18W</h4>
+							<p class="c-aaa f-siz12">18W 安全快充、支持主流 QC3.0 MTK PE+2.0快充</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:#eee;box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="brand hotgoods">
+			<h3 class="f-wei-500 f-siz18 c-666 pad-l30">品牌精选</h3>
+			<ul class="clearfix">
+				<li class="fl-l first-bg">
+					<a class="t-a-c bor-r bor-b" href="#">
+						
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r bor-b" href="#">
+						<div class="hotgoods-img">
+							<img src="images/ppjx11.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">《深泽直人》</h4>
+							<p class="c-aaa f-siz12">首次面向中国读者介绍其作品</p>
+						</div>
+						<!-- <div class="hotgoods-btn">
+							
+						</div> -->
+						<div class="hotgoods-price f-siz16 f-wei-b margin-60">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r bor-b" href="#">
+						<div class="hotgoods-img">
+							<img src="images/ppjx21.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">《日本制造》</h4>
+							<p class="c-aaa f-siz12">盛田绍夫的日式经营学</p>
+						</div>
+						<!-- <div class="hotgoods-btn">
+							
+						</div> -->
+						<div class="hotgoods-price f-siz16 f-wei-b margin-60">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/ppjx31.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">魔声&阿迪达斯 头戴式运动耳机</h4>
+							<p class="c-aaa f-siz12">磨砂质感外壳、线控通话、便携可折叠</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(1, 110, 192);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/ppjx41.jpg" alt="" width="206" height="206"/>
+							<img src="images/ppjx42.jpg" alt="" width="206" height="206"/>
+							<img src="images/ppjx43.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">JBL V700NX 无线头戴式耳机</h4>
+							<p class="c-aaa f-siz12">40mm 驱动单元、人体工学隔音耳罩</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(1, 110, 192);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(26, 26, 26);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(149, 162, 170);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/ppjx52.jpg" alt="" width="206" height="206"/>
+							<img src="images/ppjx51.jpg" alt="" width="206" height="206"/>
+							<img src="images/ppjx53.jpg" alt="" width="206" height="206"/>
+							<img src="images/ppjx54.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">Sennbeiser Urbanite XL 头戴式线控耳机</h4>
+							<p class="c-aaa f-siz12">专业音频技术、优质不锈钢组件、简单便携可折叠</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:rgb(70, 104, 230);box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(110, 82, 61);" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(53, 58, 28)" class="mar-r10"/>
+							<input type="button" name="" style="background:rgb(89, 89, 89);" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+				<li class="fl-l">
+					<a class="t-a-c bor-r" href="#">
+						<div class="hotgoods-img">
+							<img src="images/ppjx62.jpg" alt="" width="206" height="206"/>
+							<img src="images/ppjx61.jpg" alt="" width="206" height="206"/>
+						</div>
+						<div class="hotgoods-txt">
+							<h4 class="c-555 f-siz16">FIIL Diva 智能蓝牙无线降噪耳机</h4>
+							<p class="c-aaa f-siz12">手势触控、智能启停</p>
+						</div>
+						<div class="hotgoods-btn">
+							<input type="button" name="" style="background:#eee;box-shadow:0 0 0 3px rgb(178,178,178);" class="mar-r10"/>
+							<input type="button" name="" style="background:#000;" class="mar-r10"/>
+						</div>
+						<div class="hotgoods-price f-siz16 f-wei-b">
+							<p>￥<span>149.00</span></p>
+						</div>
+						<div class="hotgoods-make">
+							<span>查看详情</span>
+							<span class="shopcar c-fff">加入购物车</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="dynamic">
+			<h3 class="f-wei-500 f-siz18 c-666 pad-l30">锤子科技动态</h3>
+			<ul class="clearfix">
+				<li class="fl-l bor-r"><a href="#"></a></li>
+				<li class="fl-l bor-r"><a href="#"></a></li>
+				<li class="fl-l bor-r"><a href="#"></a></li>
+				<li class="fl-l bor-r"><a href="#"></a></li>
+			</ul>
+		</div>
+		<div class="apply">
+			<h3 class="f-wei-500 f-siz18 c-666 pad-l30">锤子应用</h3>
+			<ul class="clearfix">
+				<li class="fl-l pos-r bor-r">
+					<div class="show">
+						<div class="show-bg"></div>
+						<div class="show-txt">
+							<h4 class="f-siz16 c-666 f-wei-500 pad-t25">HandShaker</h4>
+							<p class="f-siz12 c-999 pad-t15">在Mac和Windows 电脑上也可以方便自如地管理你在Android的内容</p>
+							<p class="vertion mar-t20"></p>
+						</div>
+					</div>
+					<div class="hidden pos-a">
+						<a class="mar-t80" href="#"><img src="images/apply-hidbg01.png" alt="" width="211" height="51"/></a>
+						<a class="mar-t20" href="#"><img src="images/apply-hidbg02.png" alt="" width="211" height="51"/></a>
+						<a class="f-siz12 mar-t50" href="#">进一步了解HandShaker</a>
+					</div>
+				</li>
+				<li class="fl-l pos-r bor-r">
+					<div class="show">
+						<div class="show-bg"></div>
+						<div class="show-txt">
+							<h4 class="f-siz16 c-666 f-wei-500 pad-t25">HandShaker</h4>
+							<p class="f-siz12 c-999 pad-t15">在Mac和Windows 电脑上也可以方便自如地管理你在Android的内容</p>
+							<p class="vertion mar-t20"></p>
+						</div>
+					</div>
+					<div class="hidden pos-a">
+						<a class="mar-t80" href="#"><img src="images/apply-hidbg01.png" alt="" width="211" height="51"/></a>
+						<a class="mar-t20" href="#"><img src="images/apply-hidbg02.png" alt="" width="211" height="51"/></a>
+						<a class="f-siz12 mar-t50" href="#">进一步了解HandShaker</a>
+					</div>
+				</li>
+				<li class="fl-l pos-r bor-r">
+					<div class="show">
+						<div class="show-bg"></div>
+						<div class="show-txt">
+							<h4 class="f-siz16 c-666 f-wei-500 pad-t25">HandShaker</h4>
+							<p class="f-siz12 c-999 pad-t15">在Mac和Windows 电脑上也可以方便自如地管理你在Android的内容</p>
+							<p class="vertion mar-t20"></p>
+						</div>
+					</div>
+					<div class="hidden pos-a">
+						<a class="mar-t80" href="#"><img src="images/apply-hidbg01.png" alt="" width="211" height="51"/></a>
+						<a class="mar-t20" href="#"><img src="images/apply-hidbg02.png" alt="" width="211" height="51"/></a>
+						<a class="f-siz12 mar-t50" href="#">进一步了解HandShaker</a>
+					</div>
+				</li>
+				<li class="fl-l pos-r bor-r">
+					<div class="show">
+						<div class="show-bg"></div>
+						<div class="show-txt">
+							<h4 class="f-siz16 c-666 f-wei-500 pad-t25">HandShaker</h4>
+							<p class="f-siz12 c-999 pad-t15">在Mac和Windows 电脑上也可以方便自如地管理你在Android的内容</p>
+							<p class="vertion mar-t20"></p>
+						</div>
+					</div>
+					<div class="hidden pos-a">
+						<a class="mar-t80" href="#"><img src="images/apply-hidbg01.png" alt="" width="211" height="51"/></a>
+						<a class="mar-t20" href="#"><img src="images/apply-hidbg02.png" alt="" width="211" height="51"/></a>
+						<a class="f-siz12 mar-t50" href="#">进一步了解HandShaker</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="forum">
+			<div class="forum-top clearfix">
+				<h3 class="fl-l f-wei-500 f-siz18 c-666 pad-l30">论坛精选</h3>
+				<a class="fl-r" href="#">前往论坛></a>
+			</div>
+			<div class="forum-content">
+				<ul class="clearfix">
+					<li class="fl-l bor-r">
+						<div class="forum-info">
+							<img src="images/bbs01.jpg" alt="" width="254" height="160"/>
+							<h4 class="c-555 f-siz16 f-wei-500">"人造人罗永浩"为您介绍Smartisan OS </h4>
+							<p class="mar-b10 c-aaa f-siz12">超高效的手机桌面，加上大幅度提升工作效率的One Step（ 一步 ）和 Big Bang（ 大爆炸）功</p>
+							<a href="#">阅读全文</a>
+						</div>
+					</li>
+					<li class="fl-l bor-r">
+						<div class="forum-info">
+							<img src="images/bbs02.jpg" alt="" width="254" height="160"/>
+							<h4 class="c-555 f-siz16 f-wei-500">锤子最有出息的孩子——M1评测</h4>
+							<p class="mar-b10 c-aaa f-siz12">M1 到底好不好用？手感如何？续航怎么样？这一篇锤友的使用评测将解答您所有关于</p>
+							<a href="#">阅读全文</a>
+						</div>
+					</li>
+					<li class="fl-l bor-r">
+						<div class="forum-info">
+							<img src="images/bbs03.jpg" alt="" width="254" height="160"/>
+							<h4 class="c-555 f-siz16 f-wei-500">细节之美 Smartisan M1L 咖啡金·皮革版「图赏」</h4>
+							<p class="mar-b10 c-aaa f-siz12">看着几张图，也许会不自觉地屏住呼吸。</p>
+							<a href="#">阅读全文</a>
+						</div>
+					</li>
+					<li class="fl-l bor-r">
+						<div class="forum-info">
+							<img src="images/bbs04.jpg" alt="" width="254" height="160"/>
+							<h4 class="c-555 f-siz16 f-wei-500">【今日话题】 来论坛和锤友一起聊聊</h4>
+							<p class="mar-b10 c-aaa f-siz12">没事来论坛和一群趣味相投的锤友，坐下来打开脑洞，一起天马行空地聊聊，话题每周更新</p>
+							<a class="f-siz12" href="#">阅读全文</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<footer id="footer">
+		<nav class="clearfix">
+			<div class="footer-nav fl-l">
+				<dl class="fl-l">
+					<dt>订单服务</dt>
+					<dd><a href="#">购买指南</a></dd>
+					<dd><a href="#">支付方式</a></dd>
+					<dd><a href="#">送货政策</a></dd>
+				</dl>
+				<dl class="fl-l">
+					<dt>订单服务</dt>
+					<dd><a href="#">购买指南</a></dd>
+					<dd><a href="#">支付方式</a></dd>
+					<dd><a href="#">送货政策</a></dd>
+				</dl>
+				<dl class="fl-l">
+					<dt>订单服务</dt>
+					<dd><a href="#">购买指南</a></dd>
+					<dd><a href="#">支付方式</a></dd>
+					<dd><a href="#">送货政策</a></dd>
+				</dl>
+				<dl class="fl-l">
+					<dt>订单服务</dt>
+					<dd><a href="#">购买指南</a></dd>
+					<dd><a href="#">支付方式</a></dd>
+					<dd><a href="#">送货政策</a></dd>
+				</dl>
+				<dl class="fl-l">
+					<dt>订单服务</dt>
+					<dd><a href="#">购买指南</a></dd>
+					<dd><a href="#">支付方式</a></dd>
+					<dd><a href="#">送货政策</a></dd>
+				</dl>
+				<dl class="fl-l">
+					<dt>订单服务</dt>
+					<dd><a href="#">购买指南</a></dd>
+					<dd><a href="#">支付方式</a></dd>
+					<dd><a href="#">送货政策</a></dd>
+				</dl>
+			</div>
+			<div class="footer-tel fl-r">
+				<h2 class="f-siz30 f-wei-500 c-555">400-619-0909</h2>
+				<p class="mar-b10 c-888">周一至周日 9:00-18:00（仅收市话费）</p>
+				<a class="fl-r" href="#">在线帮助</a>
+			</div>
+		</nav>
+		<div class="copyright pad-t15 clearfix">
+			<div class="copyright-txt fl-l mar-t30">
+				<p class="f-siz12 c-888">
+					Copyright © 2017, Smartisan Digital Co., Ltd. All Rights Reserved. 北京锤子数码科技有限公司
+					<a class="mar-l10 pad-l10" href="#">法律声明</a>
+					<a class="mar-l10 pad-l10" href="#">隐私条款</a>
+					<a class="mar-l10 pad-l10" href="#">法律声明</a>
+				</p>
+				<p class="f-siz12 c-aaa">
+					<span class="mar-r20">京ICP备14041720号-1</span>
+					<span class="mar-r20">京ICP证140622号</span>
+					<span class="mar-r20">京公网安备11010502025474</span>
+				</p>
+			</div>
+			<div class="copyright-lan fl-r pos-r">
+				<div class="language">
+					<span>English</span>
+					<span>中文<i class="iconfont icon-xiala1"></i></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div id="stickTop" class="iconfont icon-zhiding">
+		
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+
+	window.onload = function(){
+		//鼠标移到购物车显示和隐藏
+		var shopcar = document.getElementById("shopcar");
+		var shopcarbox = document.getElementById("shopcarbox");
+		shopcar.onmouseover = function(){
+			shopcarbox.style.display = "block";
+			shopcarbox.style.opacity = 1;
+			console.log(shopcarbox.style.display);
+		}
+		shopcar.onmouseout = function(){
+			shopcarbox.style.display = "none";
+			shopcarbox.style.opacity = 0;
+		}
+		shopcarbox.onmouseover = function(){
+			this.style.display = "block";
+			this.style.opacity = 1;
+		}
+		shopcarbox.onmouseout = function(){
+			this.style.display = "none";
+			this.style.opacity = 0;
+		}
+
+		
+		var wH = window.innerHeight;
+		var slideUp = document.getElementById("slideUp");
+		var start_nav_slide = document.getElementById("start-nav-slide");
+		var nav_slide_img = start_nav_slide.getElementsByClassName("nav-slide-img")[0];
+
+		function show(){
+			start_nav_slide.style.transition = "height 0.5s ease";
+			start_nav_slide.style.height = wH + "px";
+		}
+		function hide(){
+			start_nav_slide.style.transition = "height 0.5s ease";
+			start_nav_slide.style.height = 0;
+		}
+		slideUp.onmouseover = function(){
+			show();
+			window.onscroll = function(){	
+				if (document.body.scrollTop > 188) {
+					start_nav_slide.style.top = "0";
+				}
+				else{
+					start_nav_slide.style.top = "188px";	
+				}
+			}
+		}
+		slideUp.onmouseout = function(){
+			hide();
+		}
+		nav_slide_img.onmouseover = function(){
+			show();
+		}
+		nav_slide_img.onmouseout = function(){
+			hide();
+		}
+		window.onscroll = function(){
+			var h = document.body.scrollTop||document.documentElement.scrollTop;
+			var stickTop = document.getElementById('stickTop');
+			var start_nav = document.getElementsByClassName('start-nav')[0];
+			var user_hid = start_nav.getElementsByClassName('user-hid')[0];
+			if(h > 100){
+				start_nav.classList.add('nav-scroll');
+				user_hid.style.display = 'block';
+			}
+			else{
+				start_nav.classList.remove('nav-scroll');
+				user_hid.style.display = 'none';
+			}
+			if (h > 600) {
+				stickTop.style.bottom = '20px';
+			}else if(h < 600){
+				stickTop.style.bottom = '-50px';
+			}
+			
+				$("#stickTop").click(function(){
+					$("html,body").animate({"scrollTop":0},1000);
+				})
+			
+		};
+		//轮播图
+		(function(){
+			var lunbo_imgs = document.getElementsByClassName("lunbo-imgs")[0];
+			lunbo_imgs.onmouseover = function(e){
+				//找中心点
+				var x = window.innerWidth/2;
+				var y = (688-188)/2 + 188;
+				var moveX = e.pageX;
+				var moveY = e.pageY;
+				//transform: rotateX(56deg)rotateY(0deg)rotateZ(-7deg);
+				this.style.transform = 'rotateX(-' + parseInt((moveY-y)*0.05) + 'deg)' + 'rotateY(-' + parseInt(moveX-x)*0.02 + 'deg)';
+			}
+			lunbo_imgs.onmouseout = function(){
+				this.style.transform = 'rotateX(0deg)' + 'rotateY(0deg)';
+			}
+			//自动轮播
+			var bgs = document.querySelectorAll('.lunbo .lunbo-imgs ul li');
+			var lis = document.querySelectorAll('.lunbo .lunbo-list ul li');
+			//var len = lis.length;
+			var Olunbo = new run(bgs,lis);
+			for(i = 0;i<lis.length;i++){
+				lis[i].i = i;
+				lis[i].onmouseover = function(){
+					console.log(this.i);
+					Olunbo.stop(this.i);
+					//console.log(this.i);
+				}
+				lis[i].onmouseout = function(){
+					Olunbo.play();
+				}
+			}
+
+		})();
+		//语言切换
+		(function(){
+			var CL = document.querySelector("#footer .copyright .copyright-lan");
+			var lan = document.querySelector("#footer .copyright .copyright-lan .language");
+			var span = document.querySelectorAll("#footer .copyright .copyright-lan .language span");
+			var icon = document.querySelector("#footer .copyright .copyright-lan .language span i");
+			var count = 0;
+			lan.onclick = function(){
+				count++;
+				if(count%2 !== 0){
+					CL.style.overflow = "visible";
+					lan.style.background = "#fff";
+					span[0].style.borderBottom = "1px solid #ddd";
+					icon.style.transform = "rotateX(180deg)";
+				}
+				else{
+					CL.style.overflow = "hidden";
+					lan.style.background = "none";
+					span[0].style.borderBottom = 0;
+					icon.style.transform = "rotateX(0deg)";
+				}
+			}
+		})();
+		//商品切换
+		(function(){
+			var imgBoxs = document.querySelectorAll('#content div ul li a .hotgoods-img');
+			var btns = document.querySelectorAll('#content div ul li a .hotgoods-btn');
+			console.log(imgBoxs.length,btns.length);
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].i = i;
+				btns[i].onmouseover = function(){
+					var inputs = this.getElementsByTagName('input');
+					//var imgs = imgBoxs[this.i].getElementsByTagName('img');
+					var imgs = this.i == btns.length?imgBoxs[this.i].getElementsByTagName('img'):imgBoxs[this.i+2].getElementsByTagName('img');
+					console.log(this.i);
+					for (var j = 0; j < inputs.length; j++) {
+						inputs[j].j = j;
+						inputs[j].onmouseover = function(){
+							for (var x = 0; x < inputs.length; x++) {
+								inputs[x].style.boxShadow = '0 0 0 1px #b2b2b2';
+								imgs[x].style.opacity = 0;
+							}
+							this.style.boxShadow = '0 0 0 3px #b2b2b2';
+							imgs[this.j].style.opacity = 1;
+						}
+					}
+				}
+			}
+		})();
+
+	};
+
+	function run(bgs,lis){
+	var index = 0;//初始化下标
+	this.play = function(){
+		this.timer = setInterval(function(){
+			bgs[index].style.opacity = 0;
+			lis[index].className = '';
+			index++;
+			if (index == bgs.length){ index = 0};
+			bgs[index].style.opacity = 1;
+			lis[index].className = 'checked';
+		},1000);
+		this.stop = function(m){
+			clearInterval(this.timer);
+				bgs[index].style.opacity = 0;
+				lis[index].className = '';
+				index = m;
+				bgs[index].style.opacity = 1;
+				lis[index].className = 'checked';
+		}
+	}
+}
+	</script>
+		
+		
+ </body>
+</html>
